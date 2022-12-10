@@ -1,0 +1,105 @@
+<!-- 
+EXERCÍCIO 4:
+No mesmo diretório do arquivo anterior, construa um novo documento HTML5 “multimidia.html”, contendo:
+- um título “Imagens e vídeos”
+- um subtítulo “Imagens”
+- um parágrafo “As imagens seguintes representam como entendo ser o mundo da programação e meu futuro como uma pessoa desenvolvedora de software”.
+Também adicione três imagens:
+- uma salva no mesmo diretório
+- outra salva em um diretório diferente
+- e outra que não está no seu computador, mas está salva em algum servidor na internet.
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+  EXERCÍCIO 7 - parte 1:
+  Crie um novo arquivo chamado “style.css” e o conecte nos 2 arquivos html criados anteriormente.
+   -->
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>FuturoDEV</title>
+</head>
+
+<!-- 
+  EXERCÍCIO 8 - parte 2:
+  Fazer eslizição diferente para cada página.
+  OBS: Por conta disso é preciso adicionar identificadores para cada página.
+ -->
+
+<body id="multimidia">
+  <!-- 
+  EXERCÍCIO 6 - parte 3:
+  O mesmo cabeçalho e rodapé deve ser inserido nos 2 arquivos
+   -->
+  <header>
+    <img src="imagens/logo.png" alt="Logo Semana 01: HTML, CSS e JS">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="multimidia.html">Multimídia</a></li>
+        <li><a href="bootstrap.html" >Bootstrap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Imagens e vídeos</h1>
+
+    <h2>Imagens</h2>
+    <p>
+      As imagens seguintes representam como entendo ser o mundo da programação e meu futuro como uma pessoa
+      desenvolvedora de software.
+    </p>
+    <div>
+      <!-- você pode usar o caminho ./ ou sem nesse caso -->
+      <img src="pessoa-programadora.jpg" alt="Desenvolvimento de software">
+      <img src="imagens/linguagens.jpg" alt="Linguagens de programação">
+      <img src="https://dl.dnzdns.com/v/Vo5U8bABF0416" alt="Pessoas desenvolvedoras de software">
+    </div>
+
+    <!-- 
+    EXERCÍCIO 5:
+    Adicione:
+    - um subtítulo “Vídeos”
+    - um parágrafo “Veja o vídeo seguinte para entender um pouco da carreira de desenvolvedor de software”
+    - 2 vídeo do youtube a sua escolha
+    -->
+    <h2>Vídeos</h2>
+    <p>
+      Veja o vídeo seguinte para entender um pouco da carreira de desenvolvedor de software.
+    </p>
+
+    <!-- para estilizar o posicionamento dos vídeos usaremos um identificador na div que os envolvem -->
+    <div id="videos">
+      
+      <!-- também adicionaremos subtítulos em cada vídeo, por isso envolver eles em divs -->
+      <div>
+        <h3>Minha Carreira Teria Sido MUITO Melhor</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NA4srP35Maw"
+          title="Minha Carreira Teria Sido MUITO Melhor" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+      <div>
+        <h3>As dicas de programação e a história de como um músico virou desenvolvedor front-end</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bSHPRLgUn6A" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por <a href="https://github.com/FuturoDEV-Lagoinha/Semana01-FundamentosDaProgramacaoWeb">Rosana
+        Rezende</a></p>
+  </footer>
+
+</body>
+
+</html>

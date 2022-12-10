@@ -1,0 +1,161 @@
+/* 
+EXERCÍCIO 7 - parte 2:
+Estilizações que devem ser iguais para os 2 arquivos:
+- fonte Verdana
+- cor de fundo cinza
+
+E para o cabeçalho
+- deve ficar fixo enquanto a página for rolada para baixo
+- ter o tamanho horizontal de 100% da largura da página
+- ter a altura de 100px
+- a logo do cabeçalho deverá ficar do lado esquerdo
+- o menu com os links do lado direito
+- todo o conteúdo deve estar centralizado verticalmente
+- a cor do texto dos links do menu brancos
+- os links devem ficar destacados de vermelho quando o usuário passar o mouse sobre eles 
+*/
+
+*{
+  font-family: Verdana, sans-serif;
+}
+
+body{
+  background-color: #ccc;
+}
+
+header{
+  /* deixar ele fixo no topo */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* tamanho */
+  width: 100%;
+  height: 100px;
+
+  /* estilizar os elementos "filhos" dele */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* como o cabeçalho tem um tamanho de 100px e ficará sempre no topo da página, precisamos colocar uma margem superior no main para que ele não fique "escondido" atrá do cabeçalho*/
+main{
+  margin-top: 100px;
+}
+
+/* estilização adicional: para deixar a logo com um tamanho melhor */
+header img{
+  width: 200px;
+  margin-left: 20px;
+}
+
+/* estilização adicional: para deixar a lista de urls (do menu) mais organizado */
+header nav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  list-style: none;
+}
+
+/* se estilizarmos apenas a propriedade <a> isso afetaria todos os links da página, então informamos ao CSS em que posição está o link que queremos estilizar */
+header nav a{
+  color: white;
+
+  /* aproveitar para tirar a linha inferior dos lnks */
+  text-decoration: none;
+
+  /* aproveitar para colocar um espaço entre os links */
+  padding: 10px;
+}
+
+/* a propriedade hover altera a tag no momento em que passamos o muse sobre ela */
+header nav a:hover{
+  color: red;
+}
+
+/* 
+EXERCÍCIO 8 - parte 1:
+Estilizações para a página Home:
+- Cor de fundo do cabeçalho preta
+- O formulário deve ocupar todo o espaço da página horizontalmente, ter uma cor de fundo rosa, e estar alinhado no lado direito da página
+- Aumente o padding do botão em 10 pixels, coloque uma borda sólida de 2 pixels na cor preta, e uma margem superior de 20 pixels.
+- O título deve conter uma imagem que cubra todo seu espaço e não tenha repetições
+*/
+
+#home header{
+  background-color: black;
+}
+
+#home main form {
+  /* o formulário já ocupa toda a página, mas se vocês quiser mudar essa propriedade basta mudar o width - vou deixar 95% pra ficar de exemplo */
+  width: 95%;
+
+  background-color: pink;
+  display: flex;
+
+  /* quando usamos o display flex automaticamente os ítens ficam 1 ao lado do outro horizontalmente, por isso informamos que eles fiquem alinhados um abaixo do outro com a propriedade abaixo */
+  flex-direction: column;
+
+  /* essa propriedade alinha o conteúdo na direita (fim da págiana horizontamente */
+  align-items: flex-end;
+}
+
+#home main form button{
+  padding: 10px;
+  border: 2px solid black;
+  margin-top: 20px;
+}
+
+#home main h1{
+  /* usar uma imagem como background */
+  background: url("https://png.pngtree.com/thumb_back/fh260/background/20210823/pngtree-glitter-bokeh-light-gray-gradient-background-image_766851.jpg") no-repeat;
+
+  /* cobre todo o espaço do componente */
+  background-size: cover;
+  
+  /* não haverá repetições da imagem, mesmo se ela for menor que o componente */
+  background-repeat: no-repeat;  
+}
+
+/* 
+EXERCÍCIO 8 - parte 2:
+Estilizações para a página Multimídia:
+- cor de fundo do cabeçalho azul
+- o subtítulo deve ter uma fonte Arial, ter o tamanho 20 e uma cor Verde
+- as imagens devem ficar uma ao lado da outra, horizontalmente
+- a imagem do meio deve deve ter uma borda arredondada
+- vídeo e seu subtítulo devem estar dentro de uma div que os posicione um embaixo do outro, alinhados no centro da página e com uma distância entre eles de 10px
+*/
+
+#multimidia header{
+  background-color: blue;
+}
+
+#multimidia main h2{
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: green;
+}
+
+
+#multimidia main img{
+  /* alteração adicional: diminuir tamanho (horizontal) das imagens pra melhorar a visualização */
+  width: 30%;
+
+  /* as imagens ficarão uma ao lado da outra */
+  display: inline-block;
+}
+
+/* podemos estilizar a tag por localização, neste caso a 2a imagem contida no main */
+#multimidia main img:nth-child(2){
+  /* borda arredondada */
+  border-radius: 50%;
+}
+
+#videos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

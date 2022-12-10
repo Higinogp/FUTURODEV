@@ -1,0 +1,119 @@
+<!-- 
+EXERCÍCIO 1:
+Construa um documento HTML, chamado “index.html”, em que a linguagem seja português do Brasil, o conjunto de caracteres seja UTF-8, com o título na aba de “FuturoDEV”. 
+O corpo deve conter um título “Home”, um subtítulo  “Semana 01” e um parágrafo contendo o texto “Este é o resultado do primeiro exercício da primeira semana do curso FuturoDEV. Nesta semana aprendi os Fundamentos da Programação WEB: Arquitetura WEB. HTML5. CSS3 e Bootstrap 4”.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+  EXERCÍCIO 7 - parte 1:
+  Crie um novo arquivo chamado “style.css” e o conecte nos 2 arquivos html criados anteriormente.
+   -->
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  <!--
+    EXERCÍCIO 10 - parte 1:
+    Crie um arquivo “index.js” e o conecte no arquivo index.html.
+   -->
+  <script src="index.js"></script>
+
+  <title>FuturoDEV</title>
+</head>
+
+
+<!-- 
+  EXERCÍCIO 8 - parte 1:
+  Fazer eslizição diferente para cada página.
+  OBS: Por conta disso é preciso adicionar identificadores para cada página.
+ -->
+<body id="home">
+  <!-- 
+  EXERCÍCIO 6 - parte 1:
+  Crie um cabeçalho que contenha:
+  - uma logo
+  - um menu com 2 links que direcionem para cada arquivo criado (Home e Multimídia)
+   -->
+  <header>
+    <img src="imagens/logo.png" alt="Logo Semana 01: HTML, CSS e JS">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="multimidia.html">Multimídia</a></li>
+        <li><a href="bootstrap.html" >Bootstrap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 
+    EXERCÍCIO 2:
+    Adicione: 
+    - uma linha horizontal entre o subtítulo e o parágrafo
+    - duas quebras de linha no parágrafo, uma logo após a palavra “FuturoDEV” e outra logo após a expressão “Programação WEB”.
+    - e transforme as três frases seguintes em elementos de uma lista
+     -->
+    <h1>Home</h1>
+    <h2>Semana 01</h2>
+    <hr>
+    <!-- a quebra de linha pode ser feita com <br>, mas se você usar o <p>, que tem a caractéristica de ser display block, ele também fará a quebra de linha e ficará mais legível-->
+    <p>
+      Este é o resultado do primeiro exercício da primeira semana do curso FuturoDEV.
+    </p>
+    <p>
+      Nesta semana aprendi os Fundamentos da Programação WEB:
+    </p>
+    <ul>
+      <li>Arquitetura WEB</li>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Bootstrap 4</li>
+    </ul>
+
+    <!-- 
+    EXERCÍCIO 3:
+    Adicione um formulário:
+    - nele deve ser possível inserir um nome, email e mensagem
+    - também deve conter um botão para enviar as informações
+     -->
+    <form action="">
+
+      <!-- como adicionamos display flex no css não precisamos mais do <br> pra quebrar linhas entre as labels e inputs -->
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+      <br>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+      <br>
+
+      <label for="mensagem">Mensagem</label>
+      <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+
+      <!-- 
+        EXERCÍCIO 10 - parte 2: JAVASCRITP
+        Adicione uma função em que, quando o usuário clicar no botão enviar do formulário ele exiba um alerta com a frase: Olá “Nome digitado no input
+      -->
+      <!-- Adicionei um atributo onclick que esperar receber uma função que será "chamada" toda vez que o botão for clicado
+        Essa função estará no arquivo index.js -->
+      <button type="submit" onclick="cumprimentarUsuario()">Enviar</button>
+  </main>
+
+  <!-- 
+  EXERCÍCIO 6 - parte 2:
+  Crie também um rodapé que contenha:
+  - seu nome 
+  - e um link que redirecione para alguma das suas rede sociais (por exemplo Linkedin ou Github)
+   -->
+  <footer>
+    <p>Desenvolvido por <a href="https://github.com/FuturoDEV-Lagoinha/Semana01-FundamentosDaProgramacaoWeb">Rosana
+        Rezende</a></p>
+  </footer>
+
+</body>
+
+</html>
